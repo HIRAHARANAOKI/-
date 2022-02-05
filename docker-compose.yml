@@ -1,11 +1,13 @@
-version: "3" # composeファイルのバージョン
+version: "3"
 services:
-  app: # サービス名
+  api:
     container_name: golang
-    build: . # ①ビルドに使うDockerfileの場所
-    tty: true # ②コンテナの永続化
-    command: go run main.go
-    ports: # ホストOSのポートとコンテナのポートをつなげる
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    tty: true
+    command: "air -c .air.toml"
+    ports:
       - "8080:8080"
     volumes:
-      - ./app:/go/src/app # ③マウントディレクトリ
+      - ./app:/go/src/app
