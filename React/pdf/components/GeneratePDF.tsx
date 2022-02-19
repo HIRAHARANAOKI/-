@@ -28,7 +28,7 @@ export const GeneratePDF = ({ data }) => {
 
   return (
     <Button onClick={generate} colorScheme="teal" size="lg">
-      PDFを作成する
+      PDFを作成す
     </Button>
   );
 };
