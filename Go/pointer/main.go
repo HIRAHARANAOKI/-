@@ -21,5 +21,4 @@ func main() {
 	fmt.Println(u)
 	u.setName(1, "Hirahara")
 	fmt.Println(u)
-
 }
